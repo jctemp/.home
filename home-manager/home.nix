@@ -1,4 +1,4 @@
-{ pkgs, stateVersion, username, ... }:
+{ pkgs, username, ... }:
 
 {
   imports = [
