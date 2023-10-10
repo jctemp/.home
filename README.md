@@ -1,0 +1,2 @@
+# .home
+Dotfiles for nixos.
