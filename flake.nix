@@ -11,7 +11,10 @@
       url = "github:nix-community/home-manager/release-23.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nvim-config.url = "github:jctemp/nvim";
+    vscode-config = {
+      url = "github:jctemp/.vsvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, ... }@inputs:
@@ -34,7 +37,7 @@
           };
           modules = [
             "${self}/home-manager/home.nix"
-            inputs.nvim-config.homeManagerModule.${system}
+            inputs.vscode-config.nixosModules.homeMangerModule
             {
               home.stateVersion = "23.05";
             }

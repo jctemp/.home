@@ -11,5 +11,5 @@ check:
 # Builds the home configuration for the current user.
 switch user=`whoami`:
     nix flake update
-    home-manager switch -v -b backup -n --flake .#{{user}}
+    home-manager switch --flake .#{{user}}
 
